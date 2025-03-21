@@ -264,13 +264,23 @@ nav ul li a.active::after {
 }
 
 .testimonials h2 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.testimonials .subtitle {
+  color: var(--gray-color);
+  font-size: 1.2rem;
   margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .testimonial-slider {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 30px;
 }
 
@@ -278,20 +288,24 @@ nav ul li a.active::after {
   background-color: var(--white-color);
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  padding: 30px;
-  max-width: 350px;
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial p {
   font-style: italic;
   margin-bottom: 1.5rem;
   color: var(--gray-color);
+  font-size: 1.2rem;
 }
 
 .testimonial::before {
   content: '"';
-  font-size: 5rem;
+  font-size: 6rem;
   font-family: Georgia, serif;
   color: rgba(52, 152, 219, 0.1);
   position: absolute;
@@ -303,11 +317,12 @@ nav ul li a.active::after {
 .client h4 {
   color: var(--primary-color);
   margin-bottom: 0.3rem;
+  font-size: 1.3rem;
 }
 
 .client p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: var(--accent-color-1);
 }
 
@@ -434,6 +449,13 @@ footer {
 .page-header h1 {
   color: var(--white-color);
   margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  font-size: 1.3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* Service Detail Styles */
@@ -729,5 +751,18 @@ footer {
 
   .testimonial {
     max-width: 100%;
+    padding: 30px;
+  }
+
+  .testimonial p {
+    font-size: 1.1rem;
+  }
+
+  .testimonials h2 {
+    font-size: 2rem;
+  }
+
+  .testimonials .subtitle {
+    font-size: 1.1rem;
   }
 }
