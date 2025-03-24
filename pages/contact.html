@@ -97,7 +97,22 @@
 
           <div class="contact-form">
             <h2>Send a Message</h2>
-            <form id="contactForm" action="#" method="POST">
+            <form
+              id="contactForm"
+              action="https://formsubmit.co/yufengzhang483@gmail.com"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New message from Johnson & Sons Bookkeeping"
+              />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://tj-s-website-xi.vercel.app/pages/thankyou.html"
+              />
+              <input type="hidden" name="_captcha" value="false" />
               <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required />

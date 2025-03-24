@@ -90,19 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
         valid = false;
       }
 
-      // If form is valid, submit (in a real implementation, this would send the data to a server)
+      // If form is valid, submit to FormSubmit service
       if (valid) {
-        // Show success message
-        const successMessage = document.createElement("div");
-        successMessage.className = "success-message";
-        successMessage.textContent =
-          "Your message has been sent successfully! We will contact you soon.";
-
-        contactForm.innerHTML = "";
-        contactForm.appendChild(successMessage);
-
-        // In a real implementation, you would send the form data to a server here
-        // For example: fetch('/send-email', { method: 'POST', body: new FormData(contactForm) })
+        // Allow the form to submit normally to FormSubmit
+        contactForm.submit();
       }
     });
   }
