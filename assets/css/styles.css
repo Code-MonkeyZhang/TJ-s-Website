@@ -191,7 +191,7 @@ nav ul li a.active::after {
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
-    url("../images/hero-bg.jpg");
+    url("../images/background.webp");
   background-size: cover;
   background-position: center;
   color: var(--white-color);
@@ -329,7 +329,10 @@ nav ul li a.active::after {
 
 /* CTA Section */
 .cta {
-  background-color: var(--primary-color);
+  background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
+    url("../images/background.webp");
+  background-size: cover;
+  background-position: center;
   color: var(--white-color);
   text-align: center;
   padding: 80px 0;
