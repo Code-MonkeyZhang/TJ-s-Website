@@ -134,6 +134,73 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // About Us Image Slider
+  const slides = document.querySelectorAll(".about-image-slider .slide");
+  let currentSlide = 0;
+  let slideInterval;
+
+  if (slides.length > 1) {
+    // Hide all slides except the first one
+    for (let i = 1; i < slides.length; i++) {
+      slides[i].classList.remove("active");
+    }
+
+    // Function to show a specific slide
+    function showSlide(index) {
+      // Hide current slide
+      slides[currentSlide].classList.remove("active");
+
+      // Update current slide index
+      currentSlide = index;
+
+      // Handle index out of bounds
+      if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+      } else if (currentSlide >= slides.length) {
+        currentSlide = 0;
+      }
+
+      // Show new current slide
+      slides[currentSlide].classList.add("active");
+    }
+
+    // Initialize automatic sliding
+    function startSlideTimer() {
+      // Clear any existing interval
+      if (slideInterval) {
+        clearInterval(slideInterval);
+      }
+
+      // Set new interval
+      slideInterval = setInterval(() => {
+        showSlide(currentSlide + 1);
+      }, 4000); // Change slide every 4 seconds
+    }
+
+    // Start the automatic sliding
+    startSlideTimer();
+
+    // Manual navigation with buttons
+    const prevButton = document.querySelector(".slider-prev");
+    const nextButton = document.querySelector(".slider-next");
+
+    if (prevButton && nextButton) {
+      // Previous slide
+      prevButton.addEventListener("click", () => {
+        showSlide(currentSlide - 1);
+        // Reset the timer to avoid immediate auto-slide after manual navigation
+        startSlideTimer();
+      });
+
+      // Next slide
+      nextButton.addEventListener("click", () => {
+        showSlide(currentSlide + 1);
+        // Reset the timer to avoid immediate auto-slide after manual navigation
+        startSlideTimer();
+      });
+    }
+  }
 });
 
 // Helper function to validate email format
