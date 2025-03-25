@@ -6,9 +6,9 @@
 /* Base Styles */
 :root {
   --primary-color: #2c3e50; /* Dark blue */
-  --secondary-color: #3498db; /* Bright blue */
+  --secondary-color: #1a4b84; /* Darker blue */
   --accent-color-1: #e74c3c; /* Red accent */
-  --accent-color-2: #2ecc71; /* Green accent */
+  --accent-color-2: #1a703d; /* Dark green accent */
   --dark-color: #1a1a1a; /* Black */
   --gray-color: #7f8c8d; /* Medium gray */
   --light-gray: #ecf0f1; /* Light gray */
@@ -353,7 +353,7 @@ nav ul li a.active::after {
 }
 
 .cta .btn:hover {
-  background-color: #27ae60;
+  background-color: #145530;
 }
 
 /* Footer */
