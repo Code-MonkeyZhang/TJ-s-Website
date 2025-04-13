@@ -404,12 +404,13 @@ footer {
 .footer-contact p {
   margin-bottom: 0.8rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .footer-contact p i {
   margin-right: 10px;
   color: var(--secondary-color);
+  margin-top: 4px;
 }
 
 .social-icons {
