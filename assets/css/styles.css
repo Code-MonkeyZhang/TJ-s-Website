@@ -358,7 +358,7 @@ nav ul li a.active::after {
 
 /* Footer */
 footer {
-  background-color: var(--dark-color);
+  background-color: #000000;
   color: var(--light-gray);
   padding: 60px 0 20px;
 }
@@ -377,7 +377,7 @@ footer {
 }
 
 .footer-logo img {
-  max-width: 120px;
+  max-width: 220px;
   margin-bottom: 1rem;
 }
 
